@@ -1,0 +1,85 @@
+.Footer {
+  display: flex;
+  height: 70px;
+  width:100%;
+  background-color: #eb0808;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(152, 0, 0, 1) 17%,
+    rgba(240, 92, 92, 1) 100%
+  );
+
+  .enterprise-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 55%;
+  }
+
+  a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Komika Title";
+    letter-spacing: 0.7px;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  .personal-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    img {
+      width: 50px;
+    }
+  }
+
+  p {
+    color: #ffffff;
+  }
+}
+
+
+
+
+@media (max-width:576px) {
+  .Footer{
+    height:45px;
+    padding:0;
+    width:100%;
+    .enterprise-info {
+      width: 50%;
+    }
+
+    a{
+      font-size: 8px;
+
+      img {
+        width: 45px;
+      }
+    }
+
+    .personal-info {
+      width: 50%;
+      img {
+        width: 22px;
+      }  
+    }
+  }
+}
+

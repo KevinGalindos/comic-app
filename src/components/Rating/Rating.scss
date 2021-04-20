@@ -1,0 +1,86 @@
+$yellowColor: #ffcc00;
+
+.contentRating {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .star-source {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    svg symbol#star {
+      fill: currentColor;
+    }
+  }
+  .star-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    svg {
+      width: 3rem;
+      height: 3rem;
+      padding: 0 0.15rem;
+      &.star {
+        color: transparent;
+
+        &:hover {
+          color: $yellowColor;
+        }
+      }
+    }
+    label {
+      cursor: pointer;
+      &:hover ~ label > .star {
+        color: $yellowColor;
+      }
+    }
+    input[name="star"] {
+      display: inline-block;
+      width: 0;
+      opacity: 0;
+      margin-left: -2px;
+      &:checked + label .star {
+        animation: starred 0.75s;
+      }
+      &:checked + label {
+        animation: scaleup 0.5s;
+      }
+      &:focus ~ label > .star {
+        color: $yellowColor;
+      }
+      &:checked ~ label > .star {
+        color: $yellowColor;
+      }
+    }
+  }
+}
+
+@keyframes scaleup {
+  from {
+    transform: scale(1.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes starred {
+  from {
+    color: rgba(232, 236, 6, 0.952);
+  }
+  to {
+    color: $yellowColor;
+  }
+}
+
+
+
+
+@media (max-width:576px) {
+
+  .contentRating{
+    width:100% 
+  }
+  
+}

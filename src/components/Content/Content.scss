@@ -1,0 +1,61 @@
+@import url("http://fonts.cdnfonts.com/css/komika-title");
+
+body {
+  margin: 0;
+}
+
+.mainContent {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 700px;
+
+  .score{
+    font-family: "Komika Title";
+      font-size: 20px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 95%;
+    &__title {
+      color: #eb0808;
+      font-family: "Komika Title";
+      font-size: 50px;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 7px rgba(135, 135, 135, 0.8);
+      margin: 0;
+    }
+    &__image {
+      height: 70%;
+    }
+  }
+}
+
+
+@media (max-width:576px) {
+  
+  .mainContent {
+    height: 490px;
+    width: 100%;
+
+     &__body {
+    width: 100%;
+          
+      &__title {
+        font-size: 32px;
+        }
+      
+      &__image {
+        width: 70%;
+        height: 55%;
+        }
+    }
+  }
+}
